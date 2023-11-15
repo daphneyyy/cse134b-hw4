@@ -3,6 +3,8 @@
 :root {
     --form-color: rgb(223, 236, 235);
     --border-color: rgb(190, 187, 187);
+    --error-color: #ff6b6b;
+    --info-color: #6b96ff;
 }
 
 .nav-contact {
@@ -15,7 +17,7 @@
     width: 90%;
     margin: 0 auto;
     padding: 1.2rem 0;
-    > summary{
+    > summary {
         font-size: 1.25rem;
         font-weight: bold;
         cursor: pointer;
@@ -34,12 +36,76 @@
     margin: 0 auto;
 }
 
-input, select, textarea {
+.form_info {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0;
+    align-items: center;
+    > label {
+        width: 20%;
+    }
+}
+
+input, textarea {
     padding: 5px 10px;
     border-radius: 10px;
-    border: 2px solid var(--border-color, black);
+    border: 2px solid var(--border-color, grey);
 }
 
 textarea {
     margin-top: 10px;
+}
+
+.error-message,
+.info-message {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .contact_info {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.2rem 0;
+        > summary {
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        > p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .form_info {
+        flex-direction: column;
+        align-items: flex-start;
+        > input, textarea {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .contact_info {
+        > summary {
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        > p {
+            font-size: 1rem;
+        }
+    }
+
+    .form_info > label {
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .form_info > label {
+        margin-right: 2rem;
+    }
 }

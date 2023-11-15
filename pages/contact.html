@@ -32,32 +32,28 @@
             <p>Email: xuy001@ucsd.edu</p>
             <p>Email: xuewenyang1@gmail.com</p>
         </details>
-        <form action="#">
+        <form action="https://httpbin.org/post" method="post">
             <fieldset class="contact_form">
                 <legend><b>Contact Form</b></legend>
-                <label for="first_name">First name:</label>
-                <input type="text" id="first_name" name="first_name"><br><br>
-                <label for="last_name">Last name:</label>
-                <input type="text" id="last_name" name="last_name"><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="occupation">Occupation:</label>
-                <select id="occupation" name="occupation">
-                    <optgroup label="Academic">
-                        <option value="student">student</option>
-                        <option value="prof">teacher/professor</option>
-                    </optgroup>
-                    <optgroup label="Non-academic">
-                        <option value="recruiter">recruiter</option>
-                    </optgroup>
-                    <optgroup label="Other">
-                        <option value="other">friend :)</option>
-                    </optgroup>
-                </select><br><br>
-                <label for="occupation">Affiliation:</label>
-                <input type="text"><br><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+                <div class="form_info">
+                    <label for="last_name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <output class="error-message" for="name"></output>
+                    <output class="info-message" for="name"></output>
+                </div>
+                <div class="form_info">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <output class="error-message" for="email"></output>
+                    <output class="info-message" for="email"></output>
+                </div>
+                <div class="form_info">
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="5" cols="30" required></textarea>
+                    <output class="error-message" for="comment"></output>
+                    <output class="info-message" for="comment"></output>
+                </div>
+                <input type="hidden" id="possible_bot" name="possible_bot" value="true">
                 <button type="submit">Submit</button>
             </fieldset>
         </form>
