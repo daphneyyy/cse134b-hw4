@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link type="text/css" href="../css/styles.css" rel="stylesheet">
+    <link type="text/css" href="../css/styles-contact.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <input type="checkbox" id="side-menu">
+        <label class="hamburger" for="side-menu">
+            <span class="hamb-line"></span>
+            <span class="hamb-line"></span>
+            <span class="hamb-line"></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="nav-home">Home</a></li>
+                <li><a href="about.html" class="nav-about">About</a></li>
+                <li><a href="projects.html" class="nav-project">Projects</a></li>
+                <li><a href="contact.html" class="nav-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <details class="contact_info">
+            <summary>Contact Information</summary>
+            <p>Email: xuy001@ucsd.edu</p>
+            <p>Email: xuewenyang1@gmail.com</p>
+        </details>
+        <form action="#">
+            <fieldset class="contact_form">
+                <legend><b>Contact Form</b></legend>
+                <label for="first_name">First name:</label>
+                <input type="text" id="first_name" name="first_name"><br><br>
+                <label for="last_name">Last name:</label>
+                <input type="text" id="last_name" name="last_name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="occupation">Occupation:</label>
+                <select id="occupation" name="occupation">
+                    <optgroup label="Academic">
+                        <option value="student">student</option>
+                        <option value="prof">teacher/professor</option>
+                    </optgroup>
+                    <optgroup label="Non-academic">
+                        <option value="recruiter">recruiter</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="other">friend :)</option>
+                    </optgroup>
+                </select><br><br>
+                <label for="occupation">Affiliation:</label>
+                <input type="text"><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <div id="footer-logo">
+            <a href="https://www.linkedin.com/in/xuewen-daphne-yang/" target="_blank"><img src="../media/linkedin-icon.png" alt="linkedin profile" width="auto" height="40px"></a>
+            <a href="https://github.com/daphneyyy" target="_blank"><img src="../media/github-icon.png" alt="github profile" width="auto" height="40px"></a>
+        </div>
+        <span>&copy; 2023 Xuewen Yang</span>
+    </footer>
+</body>
+</html>

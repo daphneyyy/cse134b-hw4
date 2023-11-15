@@ -1,0 +1,106 @@
+@import "styles.css";
+
+.nav-project {
+    background-color: var(--button-color-hover, grey);
+    color: white;
+    pointer-events: none;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 1rem;
+    > a {
+        text-align: center;
+        color: var(purple, var(--button-color-hover));
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0.3rem 1.25rem;
+        border: 0;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+    > a:hover {
+        color: var(--button-color-hover, red);
+    }
+    > h2 {
+        font-size: 1.5rem;
+        color: color(display-p3 0.4 0.7 0.25);
+    }
+    > h2::after {
+        content: "";
+        display: block;
+        width: 30%;
+        height: 2px;
+        background-color: gray;
+        margin: 1rem 0;
+    }
+    > ul {
+        > li {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+figure {
+    width: 40%;
+    margin: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .project {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .project-content {
+        width: 100%;
+        margin: 0;
+        > h2 {
+            font-size: 20px;
+        }
+        > ul {
+            > li {
+                font-size: 15px;
+            }
+        }
+        > a {
+            font-size: 15px;
+        }
+    }
+
+    figure {
+        width: 100%;
+    }    
+
+    figure img {
+        height: 200px;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    figure img {
+        height: 250px;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    figure img {
+        height: 300px;
+        width: auto;
+    }
+}

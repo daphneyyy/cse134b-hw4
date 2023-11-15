@@ -1,0 +1,210 @@
+:root {
+    --main-color: rgb(178, 211, 207);
+    --body-color: rgb(247, 250, 251);
+    --button-color: rgb(90, 186, 113);
+    --fallback-button-color: rgb(171, 250, 189);
+    --button-color-hover: rgb(69, 142, 86);
+    --font-family: "Open Sans", sans-serif;
+    --fallback-font: Arial, sans-serif;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-40px);
+    }
+    60% {
+      transform: translateY(-20px);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-color, white);
+    font-family: var(--font-family, var(--fallback-font));
+}
+
+header {
+    height: 100dvh;
+    background: url("../media/background-min.jpg") no-repeat top;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding: 1.25rem 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 4rem;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    animation: bounce 2s ease-in-out infinite
+}
+
+header h3 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+}
+
+header nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 0;
+    overflow: hidden;
+    > ul {
+        list-style-type: none;
+        float: right;
+        > li {
+            display: inline;
+            > a {
+                text-decoration: none;
+                color: black;
+                padding: 10px 10px;
+                margin-left: 5px;
+                font-size: 1rem;
+                transition: color 0.3s ease;
+            }
+            > a:hover {
+                background-color: var(--main-color, grey);
+                transition: background-color 0.3s ease;
+            }
+        }
+    }
+}
+
+header 
+
+#side-menu {
+    display: none;
+}
+
+.hamburger {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0.25rem 1rem;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+    
+}
+
+.hamb-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--button-color-hover, black);
+}
+
+footer {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    font-size: 0.7rem;
+    background-color: var(--main-color, white);
+    text-align: center;
+}
+
+#footer-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#footer-logo img {
+    height: 1.5rem;
+    width: auto;
+    padding: 0.25rem;
+}
+
+button {
+    background-color: var(--button-color, var(--fallback-button-color));
+    color: white;
+    border-radius: 10px;
+    padding: 0.3rem 1.25rem;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-color-hover, black);
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+        margin-top: 2rem;
+        padding-top: 4rem;
+    }
+    header h3 {
+        font-size: 1rem;
+        padding-bottom: 2rem;
+    }
+    .hamburger {
+        display: block;
+        z-index: 2;
+    }
+    header nav {
+        display: none;
+    }
+    header nav ul {
+        text-align: left;
+        float: left;
+        max-height: 500px;
+    }
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    #side-menu:checked ~ .hamburger .hamb-line:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+    #side-menu:checked ~ .hamburger .hamb-line:nth-child(2) {
+        opacity: 0;
+    }
+    #side-menu:checked ~ .hamburger .hamb-line:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    #side-menu:checked + label + nav {
+        display: block;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        background: url("../media/background-large.jpeg") no-repeat center;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Experiment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link type="text/css" href="../css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Experiment Page</h1>
+        <input type="checkbox" id="side-menu">
+        <label class="hamburger" for="side-menu">
+            <span class="hamb-line"></span>
+            <span class="hamb-line"></span>
+            <span class="hamb-line"></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+<!--                <li><a href="experiment.html">Experiment</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <label for="fruits">Choose a fruit:</label>
+            <input list="fruitList" id="fruits" name="fruits">
+            <datalist id="fruitList">
+                <option value="Apple">
+                <option value="Banana">
+                <option value="Cherry">
+                <option value="Grape">
+                <option value="Orange">
+            </datalist>
+        </div>
+        <hr>
+        <div>
+            <h3>First code!</h3>
+            <pre>
+                <code>
+                >>> print("Hello World!")
+                Hello World!
+                </code>
+            </pre>
+        </div>
+        <hr>
+        <template>
+            <p>Hello! This is a template!</p>
+            <hr>
+        </template>
+        <audio controls>
+            <source src="#" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <hr>
+        <div class="canvas">
+            <h3>Simple Canvas</h3>
+            <canvas id="myCanvas"></canvas>
+            <script>
+                var canvas = document.getElementById("myCanvas");
+                var context = canvas.getContext("2d");
+                context.fillStyle = "skyblue";
+                context.fillRect(50, 50, 100, 100);
+            </script>
+        </div>
+        <hr>
+        <div>
+            <h3>SVG</h3>
+            <svg>
+                <circle cx="50" cy="50" r="40" fill="purple" />
+            </svg>
+        </div>
+        <hr>
+        <section id="ec">
+            <h3>Extra Credit</h3>
+            <div>
+                <h4>Einstein's famous formula</h4>
+                <math>
+                    <mrow>
+                        <mi>E</mi>
+                        <mo>=</mo>
+                        <mi>m</mi>
+                        <msup>
+                            <mi>c</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </mrow>
+                </math>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer-logo">
+            <a href="https://www.linkedin.com/in/xuewen-daphne-yang/" target="_blank"><img src="../media/linkedin-icon.png" alt="linkedin profile"></a>
+            <a href="https://github.com/daphneyyy" target="_blank"><img src="../media/github-icon.png" alt="github profile"></a>
+        </div>
+        <span>&copy; 2023 Xuewen Yang</span>
+    </footer>
+</body>
+</html>
