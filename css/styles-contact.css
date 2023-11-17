@@ -3,8 +3,8 @@
 :root {
     --form-color: rgb(223, 236, 235);
     --border-color: rgb(190, 187, 187);
-    --error-color: #ff6b6b;
-    --info-color: #6b96ff;
+    --valid-color: rgb(93, 198, 118);
+    --invalid-color: rgb(241, 75, 75);
 }
 
 .nav-contact {
@@ -56,6 +56,13 @@ textarea {
     margin-top: 10px;
 }
 
+input:valid, textarea:valid {
+    border-color: var(--valid-color, green);
+}
+
+input:invalid, textarea:invalid {
+    border-color: var(--invalid-color, red);
+}
 .error-message,
 .info-message {
     font-size: 0.8rem;
