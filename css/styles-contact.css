@@ -60,14 +60,34 @@ input:valid, textarea:valid {
     border-color: var(--valid-color, green);
 }
 
-input:invalid, textarea:invalid {
+input:user-invalid, textarea:user-invalid {
     border-color: var(--invalid-color, red);
 }
-.error-message,
+
+input::placeholder,
+textarea::placeholder {
+    color: lightgrey;
+}
+
 .info-message {
     font-size: 0.8rem;
     margin: 0;
     padding: 0;
+    transition: color 0.3s ease-out;
+}
+
+.error-message {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    color: red;
+    animation: flashError 0.3s ease-out;
+}
+
+@keyframes flashError {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
 
 @media screen and (max-width: 480px) {

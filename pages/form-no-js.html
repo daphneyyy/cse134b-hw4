@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans"
+            rel="stylesheet">
+        <link type="text/css" href="../css/styles.css" rel="stylesheet">
+        <link type="text/css" href="../css/styles-contact.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Contact Me</h1>
+            <input type="checkbox" id="side-menu">
+            <label class="hamburger" for="side-menu">
+                <span class="hamb-line"></span>
+                <span class="hamb-line"></span>
+                <span class="hamb-line"></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="nav-home">Home</a></li>
+                    <li><a href="about.html" class="nav-about">About</a></li>
+                    <li><a href="projects.html" class="nav-project">Projects</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <details class="contact_info">
+                <summary>Contact Information</summary>
+                <p>Email: xuy001@ucsd.edu</p>
+                <p>Email: xuewenyang1@gmail.com</p>
+            </details>
+            <form action="https://httpbin.org/post" method="post">
+                <fieldset class="contact_form">
+                    <legend><b>Contact Form</b></legend>
+                    <div class="form_info">
+                        <label for="last_name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <output class="error-message" for="name"></output>
+                        <output class="info-message" for="name"></output>
+                    </div>
+                    <div class="form_info">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required
+                            placeholder="example@gmail.com">
+                        <output class="error-message" for="email"></output>
+                        <output class="info-message" for="email"></output>
+                    </div>
+                    <div class="form_info">
+                        <label for="comment">Comment:</label>
+                        <textarea id="comment" name="comment" rows="5" cols="30"
+                            required pattern="^[a-zA-Z0-9\s.,!?-]+$"
+                            minlength="10"
+                            maxlength="500"></textarea>
+                        <output class="error-message" for="comment"></output>
+                        <output class="info-message" for="comment"></output>
+                    </div>
+                    <input type="hidden" id="possible_bot" name="possible_bot"
+                        value="true">
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </main>
+
+        <footer>
+            <div id="footer-logo">
+                <a href="https://www.linkedin.com/in/xuewen-daphne-yang/"
+                    target="_blank"><img src="../media/linkedin-icon.png"
+                        alt="linkedin profile" width="auto" height="40px"></a>
+                <a href="https://github.com/daphneyyy" target="_blank"><img
+                        src="../media/github-icon.png" alt="github profile"
+                        width="auto" height="40px"></a>
+            </div>
+            <span>&copy; 2023 Xuewen Yang</span>
+        </footer>
+    </body>
+</html>
