@@ -38,7 +38,8 @@
                     <legend><b>Contact Form</b></legend>
                     <div class="form_info">
                         <label for="last_name">Name:</label>
-                        <input type="text" id="name" name="name" required placeholder="First Last">
+                        <input type="text" id="name" name="name" required
+                            placeholder="First Last">
                         <output class="error-message" for="name"></output>
                         <output class="info-message" for="name"></output>
                     </div>
@@ -52,10 +53,7 @@
                     <div class="form_info">
                         <label for="comment">Comment:</label>
                         <textarea id="comment" name="comment" rows="5" cols="30"
-                            required pattern="^[a-zA-Z0-9\s.,!?-]+$"
-                            minlength="10"
-                            maxlength="500"
-                            placeholder="500 characters max."></textarea>
+                            required placeholder="500 characters max."></textarea>
                         <output class="error-message" for="comment"></output>
                         <output class="info-message" for="comment"></output>
                     </div>
