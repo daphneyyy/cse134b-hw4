@@ -59,6 +59,14 @@ figure {
     text-align: center;
 }
 
+body.dark .project-content a {
+    color: lightcyan;
+}
+
+body.dark .project-content a:hover {
+    color: var(--button-color-hover, red);
+}
+
 @media screen and (max-width: 480px) {
     .project {
         flex-direction: column;

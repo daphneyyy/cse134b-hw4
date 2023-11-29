@@ -38,25 +38,33 @@
                     <legend><b>Contact Form</b></legend>
                     <div class="form_info">
                         <label for="last_name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        <output class="error-message" for="name"></output>
-                        <output class="info-message" for="name"></output>
+                        <input type="text" id="name" name="name" required
+                            placeholder="First Last">
+                        <div class="output-message">
+                            <output class="error-message" for="name"></output>
+                            <output class="info-message" for="name"></output>
+                        </div>
                     </div>
                     <div class="form_info">
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required
-                            placeholder="example@gmail.com">
-                        <output class="error-message" for="email"></output>
-                        <output class="info-message" for="email"></output>
+                            placeholder="example@email.com">
+                        <div class="output-message">
+                            <output class="error-message" for="email"></output>
+                            <output class="info-message" for="email"></output>
+                        </div>
                     </div>
                     <div class="form_info">
                         <label for="comment">Comment:</label>
                         <textarea id="comment" name="comment" rows="5" cols="30"
-                            required pattern="^[a-zA-Z0-9\s.,!?-]+$"
-                            minlength="10"
-                            maxlength="500"></textarea>
-                        <output class="error-message" for="comment"></output>
-                        <output class="info-message" for="comment"></output>
+                            maxlength="500"
+                            placeholder="500 characters max."
+                            pattern="^[\w\s.,'()!?-]*$"
+                            required ></textarea>
+                        <div class="output-message">
+                            <output class="error-message" for="comment"></output>
+                            <output class="info-message" for="comment"></output>
+                        </div>
                     </div>
                     <input type="hidden" id="possible_bot" name="possible_bot"
                         value="true">

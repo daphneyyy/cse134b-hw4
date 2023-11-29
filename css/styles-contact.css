@@ -38,22 +38,24 @@
 
 .form_info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 0.5rem 0;
-    align-items: center;
     > label {
         width: 20%;
     }
+}
+
+.output-message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 input, textarea {
     padding: 5px 10px;
     border-radius: 10px;
     border: 2px solid var(--border-color, grey);
-}
-
-textarea {
-    margin-top: 10px;
 }
 
 input:valid, textarea:valid {
@@ -71,8 +73,11 @@ textarea::placeholder {
 
 .info-message {
     font-size: 0.8rem;
+    font-weight: bold;
     margin: 0;
     padding: 0;
+    color: green;
+    font-family: Roboto, sans-serif;
     transition: color 0.3s ease-out;
 }
 
@@ -80,14 +85,32 @@ textarea::placeholder {
     font-size: 0.8rem;
     margin: 0;
     padding: 0;
+    margin: 0.5rem;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
     color: red;
     animation: flashError 0.3s ease-out;
 }
 
+body.dark .contact_form {
+    background-color: #646060;
+}
+
+body.dark .info-message {
+    background-color: white;
+}
+
+body.dark .error-message {
+    background-color: white;
+}
+
 @keyframes flashError {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -106,8 +129,6 @@ textarea::placeholder {
     }
 
     .form_info {
-        flex-direction: column;
-        align-items: flex-start;
         > input, textarea {
             width: 100%;
         }
@@ -127,12 +148,12 @@ textarea::placeholder {
     }
 
     .form_info > label {
-        margin-right: 1rem;
+        margin-bottom: 0rem;
     }
 }
 
 @media screen and (min-width: 1025px) {
     .form_info > label {
-        margin-right: 2rem;
+        margin-bottom: 0.5rem;
     }
 }
